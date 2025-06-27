@@ -1,30 +1,70 @@
-.row {
-  /* margin: 1rem 10rem 0 10rem ; */
-  text-align: center;
-  font-size: medium;
-  margin: 1rem;
+
+@import '../../../global.css';
+
+/* Layout moderno para formulário de produto */
+.form-produto-container {
+  max-width: 420px;
+  margin: 3.5rem auto 2rem auto;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5em 2em 2em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--primary-light);
+  position: relative;
 }
-.label-large {
-  font-size: 20px;
+.form-produto-container h2 {
+  margin-bottom: 1.5em;
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
-.input-field input {
-  border-bottom-color: palevioletred !important;
+.input-field {
+  width: 100%;
+  margin-bottom: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
 }
 .input-field label {
-  font-size: 17px;
-  color: palevioletred;
-}
-.input-field label:focus {
-    font-size: 17px;
-    color: palevioletred;
-  }
-
-.input-field input:focus + label {
-
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 0.4em;
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
   font-weight: 500;
-  color: palevioletred !important;
+}
+.input-field input {
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius);
+  padding: 0.8em 1.2em;
+  background: #fff8fa;
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-size: 1.08rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.input-field input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px #e573b133;
 }
 .div-seletor {
-  margin: 1rem 10rem;
-  text-align: center;
+  width: 100%;
+  margin: 1.2em 0 1.5em 0;
+  text-align: left;
 }
+.form-produto-actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  margin-top: 1.2em;
+}
+.form-produto-actions button {
+  min-width: 120px;
+}
+

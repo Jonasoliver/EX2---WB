@@ -1,24 +1,77 @@
-.mb-3{
-    margin: 1rem;
-    
+
+@import '../../global.css';
+
+nav, .nav-wrapper {
+  background: #fff !important;
+  border-bottom: 2.5px solid var(--border);
+  box-shadow: 0 2px 16px #ffd70022;
+}
+.brand-logo {
+  color: var(--primary) !important;
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 8px #f8bbd055;
+}
+.sidenav {
+  background: #fff !important;
+  border-right: 2px solid var(--primary-light);
+}
+.sidenav li a {
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  margin: 0.3em 0.7em;
+  transition: background 0.2s, color 0.2s;
+}
+.sidenav li a:hover {
+  background: var(--primary-light);
+  color: var(--text);
+}
+.right.hide-on-med-and-down li a {
+  color: var(--primary);
+  font-size: 1.08rem;
+  font-weight: 600;
+  border-radius: 18px;
+  margin: 0 0.5em;
+  padding: 0.5em 1.2em;
+  transition: background 0.2s, color 0.2s;
+}
+.right.hide-on-med-and-down li a:hover {
+  background: var(--primary-light);
+  color: var(--text);
+}
+.sidenav-trigger i {
+  color: var(--primary);
+}
+
+.mb-3 {
+  margin: 1.5rem 0;
 }
 .mb-3 .tab-content {
-    background-color: lightblue; 
-    width: 100%;/* Define a cor de fundo da aba ativa */
-  }
+  background: var(--surface);
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5em 1em;
+}
 .mb-3 .nav-link {
-    color: palevioletred; /* Cor do texto */
-    font-weight: medium !important; /* Torna o texto em negrito */
-  }
-
-/* Estilo para aba ativa */
+  color: var(--primary);
+  font-weight: 500 !important;
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 0.7em 1.2em;
+  margin-right: 0.5em;
+  background: var(--secondary);
+  transition: background 0.2s, color 0.2s;
+}
 .mb-3 .nav-link.active {
-    font-weight: 500;
-    color: palevioletred;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+}
+.lista-cliente-container {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-.lista-cliente-container{
-    margin-left: 10rem;
-    margin-right: 10rem;
-}
-  

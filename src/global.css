@@ -1,0 +1,175 @@
+/* src/global.css - Estilo global moderno e responsivo */
+
+
+
+:root {
+  --primary: #e573b1;
+  --primary-light: #f8bbd0;
+  --accent: #ffd700;
+  --secondary: #fff0f6;
+  --background: linear-gradient(135deg, #fff0f6 0%, #f8bbd0 100%);
+  --surface: #fff;
+  --text: #6d326d;
+  --text-light: #b48bb4;
+  --border: #ffd700;
+  --radius: 18px;
+  --shadow: 0 4px 24px rgba(231,115,177,0.10);
+  --font: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+}
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font);
+  letter-spacing: 0.01em;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 0;
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent);
+}
+
+
+
+button, input, select, textarea {
+  font-family: inherit;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  outline: none;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+button {
+  background: linear-gradient(90deg, var(--primary-light) 60%, var(--primary) 100%);
+  color: #fff;
+  border: none;
+  padding: 0.9em 2em;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  margin: 0.5em 0;
+  border-radius: 30px;
+  letter-spacing: 0.04em;
+  transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
+}
+button:hover {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
+  color: var(--primary);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(255,215,0,0.10);
+}
+
+
+
+input, select, textarea {
+  background: var(--surface);
+  padding: 0.7em 1.2em;
+  border: 2px solid var(--primary-light);
+  margin: 0.4em 0;
+  font-size: 1.05rem;
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(231,115,177,0.06);
+  position: relative;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px #e573b133;
+}
+
+
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.2em 1.5em;
+  margin: 2em 0;
+  border: 2px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: -30px; left: -30px;
+  width: 90px; height: 90px;
+  background: var(--primary-light);
+  opacity: 0.10;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.table th, .table td {
+  padding: 1.1em 1em;
+  border-bottom: 1.5px solid var(--primary-light);
+  text-align: left;
+}
+.table th {
+  background: var(--primary-light);
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 10px;
+}
+
+
+
+@media (max-width: 700px) {
+  .card, .table th, .table td {
+    padding: 1em 0.5em;
+  }
+  body {
+    font-size: 0.97rem;
+  }
+  button {
+    padding: 0.7em 1.2em;
+    font-size: 1rem;
+  }
+}
